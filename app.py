@@ -32,6 +32,9 @@ st_lottie(lottie_hello, key="hello")
 
 st.title("Laptop Predictor")
 
+pipe = pickle.load(open('pipe.pkl', 'rb'))
+df = pickle.load(open('df.pkl', 'rb'))
+
 company = st.selectbox('Brand', df['Company'].unique())
 
 typeName = st.selectbox('Type', df['TypeName'].unique())
